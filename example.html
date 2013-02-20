@@ -7,7 +7,7 @@
                 height: 100%;
             }
             div#imagePane {
-                background: url(image.png);
+                background: black;
                 float: left;
                 width: 55%;
                 height: 600px;
@@ -23,11 +23,17 @@
                 display: none;
             }
         </style>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="jHeightMaster.js"></script>
         <script>
+            var delay = (function(){var timer = 0;return function(callback, ms){clearTimeout (timer);timer = setTimeout(callback, ms);};})();
             $(document).ready(function() {
-                jHeightMaster($('#imagePane'),$('#listPane'),'hideMe');
+                $(window).resize(function() {
+                    delay(function(){
+                        jHeightMaster($('#imagePane'),$('#listPane'),'hideMe');
+                    }, 125);
+                });
+                $(window).trigger('resize');
             });
         </script>
     </head>
@@ -40,6 +46,13 @@
                 <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
                 <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
