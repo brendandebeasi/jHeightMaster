@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            html,body,#container {
+                height: 100%;
+            }
+            div#imagePane {
+                background: url(image.png);
+                float: left;
+                width: 55%;
+                height: 600px;
+            }
+            ul#listPane {
+                float: right;
+                width: 30%;
+            }
+            .clear {
+                clear: both;
+            }
+            .hideMe {
+                display: none;
+            }
+        </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="jHeightMaster.js"></script>
+        <script>
+            $(document).ready(function() {
+                jHeightMaster($('#imagePane'),$('#listPane'),'hideMe');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="imagePane"></div>
+            <ul id="listPane">
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Item - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>
