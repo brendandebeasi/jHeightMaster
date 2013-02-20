@@ -9,7 +9,7 @@ slaveElement - the object that will shrink to be smaller than or equal to in hei
     var slaveHeight          = slaveElement.outerHeight();
     slaveElement.children().removeClass(hiddenClass);
     while(slaveHeight > masterHeight) {
-        slaveElement.children().not('.'+hiddenClass).reverse().last().addClass(hiddenClass);
+        slaveElement.children().not('.'+hiddenClass).not('.alwaysShow').reverse().last().addClass(hiddenClass);
         slaveHeight = slaveElement.outerHeight();
     }
 
